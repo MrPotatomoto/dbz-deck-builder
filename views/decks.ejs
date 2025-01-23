@@ -1,0 +1,16 @@
+<% layout('layout', { title: 'Decks' }) %>
+<h1 class="display-4 mb-4"><%= (viewedUser) ? `${viewedUser.username}'s ` : 'All ' %>Decks</h1>
+<div class="list-group p-0">
+    <% decks.forEach(deck => { %>
+        <div class="list-group-item p-0 d-flex justify-content-between align-items-center">
+            <a href="/decks/<%= deck._id %>" class="deck-info" style="text-decoration: none; color: inherit; flex-grow: 1;">
+                <div class="p-3">
+                    <h5 class="mb-1"><%= deck.name %></h5>
+                    <p><i class="fas fa-user text-muted"></i>&nbsp;&nbsp;<%= deck.user.username %></p>
+                    <p class="mb-1"><%= deck.description %></p>
+                    <small class="text-muted">Created on: <%= deck.createdAt.toDateString() %></small>
+                </div>
+            </a>
+        </div>
+    <% }) %>
+</div>

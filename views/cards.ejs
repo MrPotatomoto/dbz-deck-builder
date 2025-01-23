@@ -1,0 +1,9 @@
+<% layout('layout', { title: 'Cards' }) %>
+<h1 class="display-4">Cards</h1>
+<div class="row card-container">
+    <% cards.forEach(card => { %>
+        <div class="col-4 mb-4">
+            <img class="img-fluid" src="<%= card.img_url %>" class="card-img-top" alt="<%= card.name %>">
+        </div>
+    <% }) %>
+</div>

@@ -1,0 +1,13 @@
+<% layout('layout', { title: 'Create Deck' }) %>
+<h1 class="display-4">Create a New Deck</h1>
+<form id="createDeckForm" action="/decks" method="post">
+    <div class="form-group">
+        <label for="deckName">Deck Name</label>
+        <input type="text" class="form-control" id="deckName" name="name" placeholder="Enter deck name" required>
+    </div>
+    <div class="form-group">
+        <label for="deckDescription">Description <small class="text-muted">(Optional)</small></label>
+        <textarea class="form-control" id="deckDescription" name="description" rows="3" placeholder="Enter deck description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Deck</button>
+</form>

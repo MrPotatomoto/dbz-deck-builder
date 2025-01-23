@@ -1,0 +1,9 @@
+<%- layout('layout', { title: 'Request Password Reset' }) %>
+<h1 class="display-4">Request Password Reset</h1>
+<form action="/request-reset" method="post">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Request Reset</button>
+</form>

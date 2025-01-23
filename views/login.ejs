@@ -1,0 +1,18 @@
+<% layout('layout', { title: 'Login' }) %>
+<div class="col-4 offset-4">
+    <h1 class="display-4">Login</h1>
+    <form action="/login" method="post">
+        <div class="form-group">
+            <label for="identifier">Username or Email</label>
+            <input type="text" class="form-control" id="identifier" name="identifier" placeholder="Enter username or email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <div class="mt-3">
+        <a href="/request-reset" class="p-0 btn btn-link">Forgot Password?</a>
+    </div>
+</div>
