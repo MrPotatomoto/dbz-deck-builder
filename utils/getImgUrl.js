@@ -25,8 +25,7 @@ function getImgUrl(card) {
         cardImgUrl += '.jpg'
     }
 
-
-    return { url:'/img/cards/' + card.set.split(' ').join('-').toL + '/' + cardImgUrl.split(' ').join('-'), name }
+    return { url:'/img/cards/' + card.set.split(' ').join('-') + '/' + cardImgUrl.split(' ').join('-'), name }
 }
 
 module.exports = { getImgUrl }
