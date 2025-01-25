@@ -96,6 +96,8 @@ const addImgToViewer = (imgUrl) => {
     img.src = imgUrl;
     viewer.appendChild(img);
 
+    // console.log('Image URL:', imgUrl);
+
     viewer.style.display = 'block';
 };
 
