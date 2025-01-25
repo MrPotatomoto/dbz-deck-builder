@@ -62,17 +62,17 @@ const checkAuth = (req, res, next) => {
 app.use(checkAuth);
 
 // Fix card img urls
-// const { getImgUrl } = require('./utils/getImgUrl');
+const { getImgUrl } = require('./utils/getImgUrl');
 
-// app.get('/fix-card-img-urls', async (req, res) => {
-//     const cards = await Card.find();
-//     cards.forEach(card => {
-//         const { url } = getImgUrl(card);
-//         card.img_url = url.toLowerCase();
-//         card.save();
-//     })
-//     res.send('Card img urls fixed');
-// });
+app.get('/fix-card-img-urls', async (req, res) => {
+    const cards = await Card.find();
+    cards.forEach(card => {
+        const { url } = getImgUrl(card);
+        card.img_url = url.toLowerCase();
+        card.save();
+    })
+    res.send('Card img urls fixed');
+});
 
 // Routes
 const cardRoutes = require('./routes/cardRoutes');

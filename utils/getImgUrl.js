@@ -26,7 +26,7 @@ function getImgUrl(card) {
     }
 
 
-    return { url:'https://3qyxgnemlqlqr8wj.public.blob.vercel-storage.com/cards/' + card.set.split(' ').join('-').toL + '/' + cardImgUrl.split(' ').join('-'), name }
+    return { url:'/img/cards/' + card.set.split(' ').join('-').toL + '/' + cardImgUrl.split(' ').join('-'), name }
 }
 
 module.exports = { getImgUrl }
