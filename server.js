@@ -7,7 +7,7 @@ require('dotenv').config();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
-const session = require('express-session');
+const session = require('cookie-session');
 const flash = require('connect-flash');
 
 // Connect to MongoDB
