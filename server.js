@@ -11,7 +11,7 @@ const session = require('cookie-session');
 const flash = require('connect-flash');
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/realtimeapp');
+mongoose.connect(process.env.MONGODB_URI);
 
 // Middleware
 app.engine('ejs', ejsMate);
